@@ -2,13 +2,15 @@ import React from "react"
 
 function Votes({
   upvotes,
-  downvotes
+  downvotes,
+  handleUpvotes,
+  handleDownvotes
 }) {
 
   return (
     <div className="Votes">
-      <button>{`${upvotes} 👍`}</button>
-      <button>{`${downvotes} 👎`}</button>
+      <button onClick={handleUpvotes}>{`${upvotes} 👍`}</button>
+      <button onClick={handleDownvotes}>{`${downvotes} 👎`}</button>
     </div>
   );
 }

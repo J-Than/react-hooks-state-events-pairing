@@ -9,14 +9,21 @@ function VideoData({
   upvotes,
   downvotes,
   showComments,
-  handleShowComments
+  handleShowComments,
+  handleUpvotes,
+  handleDownvotes
 }) {
 
   return (
     <div className="VideoData">
       <h1>{title}</h1>
       <p>{`${views} views | Uploaded ${createdAt}`}</p>
-      <Votes upvotes={upvotes} downvotes={downvotes} />
+      <Votes
+        upvotes={upvotes}
+        downvotes={downvotes}
+        handleUpvotes={handleUpvotes}
+        handleDownvotes={handleDownvotes}
+      />
       <ShowComments showComments={showComments} handleShowComments={handleShowComments} />
     </div>
   );
